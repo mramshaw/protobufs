@@ -22,7 +22,7 @@ and Thrift (and - if efficiency is not a concern - JSON and XML too).
 
 ## Golang
 
-Install the Golang protobuf complier as follows:
+Install the Golang protobuf compiler as follows:
 
     $ go get -u github.com/golang/protobuf/protoc-gen-go
 
@@ -67,7 +67,7 @@ As usual, install dependencies with `pip` (or `pip3` for Python 3):
 
 Generate code as follows:
 
-    $ cd golang
+    $ cd python
     $ ./build_python.sh
     $
 
@@ -98,8 +98,10 @@ $
 
 ## Versions
 
+* Go __1.11__
 * protobuf (Golang) __v1.2.0__
 * protobuf (Python) __3.6.1__
+* Python __2.7.12__
 
 ## Reference
 
@@ -142,7 +144,9 @@ Python:
 
     http://developers.google.com/protocol-buffers/docs/pythontutorial
 
-[Uses protobuf format 2, which we will try to update to 3.]
+[Uses protobuf format 2, which we will update to format 3. In fact,
+ we will use the same __proto__ file for both - now that's language
+ agnostic!]
 
 Example Golang and Python code from:
 
