@@ -34,6 +34,31 @@ Generate code as follows:
     $ ./build_golang.sh
     $
 
+Create an address book entry as follows:
+
+```bash
+$ go run add_person.go ../AddressBook
+../AddressBook: File not found.  Creating new file.
+Enter person ID number: 2
+Enter name: Wilma
+Enter email address (blank for none): wilma@b.com
+Enter a phone number (or leave blank to finish): 555-555-2121
+Is this a mobile, home, or work phone? home
+Enter a phone number (or leave blank to finish):
+$
+```
+
+List the address book as follows:
+
+```bash
+$ go run list_people.go ../AddressBook
+Person ID: 2
+  Name: Wilma
+  E-mail address: wilma@b.com
+  Home phone #: 555-555-2121
+$
+```
+
 ## Python
 
 As usual, install dependencies with `pip` (or `pip3` for Python 3):
@@ -45,6 +70,31 @@ Generate code as follows:
     $ cd golang
     $ ./build_python.sh
     $
+
+Create an address book entry as follows:
+
+```bash
+$ python add_person.py ../AddressBook
+../AddressBook: File not found.  Creating a new file.
+Enter person ID number: 4
+Enter name: Fred
+Enter email address (blank for none): fred@a.com
+Enter a phone number (or leave blank to finish): 555-555-1212
+Is this a mobile, home, or work phone? mobile
+Enter a phone number (or leave blank to finish):
+$
+```
+
+List the address book as follows:
+
+```bash
+$ python list_people.py ../AddressBook
+Person ID: 4
+  Name: Fred
+  E-mail address: fred@a.com
+  Mobile phone #: 555-555-1212
+$
+```
 
 ## Versions
 
@@ -60,6 +110,10 @@ Being a Google thing, they are the place to go for help.
 [It's worth noting that protobufs are NOT human-readable and only have
  meaning with respect to a __.proto__ file - which defines the format
  of all messages. Neither are they ___self-describing___ (like XML).]
+
+Proto 3 language guide:
+
+    http://developers.google.com/protocol-buffers/docs/proto3
 
 Golang:
 
@@ -89,3 +143,7 @@ Python:
     http://developers.google.com/protocol-buffers/docs/pythontutorial
 
 [Uses protobuf format 2, which we will try to update to 3.]
+
+Example Golang and Python code from:
+
+    http://github.com/protocolbuffers/protobuf/tree/master/examples
