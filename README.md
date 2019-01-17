@@ -8,7 +8,9 @@ Compare and contrast "protobuf" usage in Python and Golang
 
 Google describes `protobufs` as:
 
-> a language-neutral, platform-neutral, extensible way of serializing structured data for use in communications protocols, data storage, and more
+> a language-neutral, platform-neutral, extensible way of serializing
+> structured data for use in communications protocols, data storage,
+> and more
 
 Having previously investigated protobufs and gRPC with Golang, they
 naturally sprang to mind when I was investigating language-agnostic
@@ -20,11 +22,17 @@ and Thrift (and - if efficiency is not a concern - JSON and XML too).
 
 ## Golang
 
-Probably:
+Install the Golang protobuf complier as follows:
 
-    $ go install golang/protobuf
+    $ go get -u github.com/golang/protobuf/protoc-gen-go
 
 [Although I would really prefer to use `vgo` instead.]
+
+Generate code as follows:
+
+    $ cd golang
+    $ ./build_golang.sh
+    $
 
 ## Python
 
@@ -32,10 +40,16 @@ As usual, install dependencies with `pip` (or `pip3` for Python 3):
 
     $ pip install --user -r requirements.txt
 
+Generate code as follows:
+
+    $ cd golang
+    $ ./build_python.sh
+    $
+
 ## Versions
 
-protobuf (Golang) __v1.2.0__
-protobuf (Python) __3.6.1__
+* protobuf (Golang) __v1.2.0__
+* protobuf (Python) __3.6.1__
 
 ## Reference
 
@@ -46,6 +60,14 @@ Being a Google thing, they are the place to go for help.
 [It's worth noting that protobufs are NOT human-readable and only have
  meaning with respect to a __.proto__ file - which defines the format
  of all messages. Neither are they ___self-describing___ (like XML).]
+
+Golang:
+
+    http://github.com/golang/protobuf
+
+Python:
+
+    http://pypi.org/project/protobuf/
 
 ## To Do
 
@@ -60,6 +82,10 @@ Golang:
 
     http://developers.google.com/protocol-buffers/docs/gotutorial
 
+[Uses protobuf format 3.]
+
 Python:
 
     http://developers.google.com/protocol-buffers/docs/pythontutorial
+
+[Uses protobuf format 2, which we will try to update to 3.]
