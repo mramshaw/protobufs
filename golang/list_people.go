@@ -46,7 +46,6 @@ func main() {
 	}
 	fname := os.Args[1]
 
-	// [START unmarshal_proto]
 	// Read the existing address book.
 	in, err := ioutil.ReadFile(fname)
 	if err != nil {
@@ -56,7 +55,6 @@ func main() {
 	if err := proto.Unmarshal(in, book); err != nil {
 		log.Fatalln("Failed to parse address book:", err)
 	}
-	// [END unmarshal_proto]
 
 	listPeople(os.Stdout, book)
 }
