@@ -128,6 +128,7 @@ Python:
 ## To Do
 
 - [x] Add a badge for Snyk.io vulnerability scanning
+- [ ] Add more __proto__ use cases for comparison purposes
 - [ ] Investigate Golang protobufs using `vgo` (latest Go package manager)
 - [ ] Investigate [pystream-protobuf](http://pypi.org/project/pystream-protobuf/)
 - [ ] Investigate [read-protobuf](http://libraries.io/pypi/read-protobuf)
