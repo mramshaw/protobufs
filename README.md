@@ -113,6 +113,10 @@ Being a Google thing, they are the place to go for help.
  meaning with respect to a __.proto__ file - which defines the format
  of all messages. Neither are they ___self-describing___ (like XML).]
 
+Proto style guide:
+
+    http://developers.google.com/protocol-buffers/docs/style
+
 Proto 3 language guide:
 
     http://developers.google.com/protocol-buffers/docs/proto3
